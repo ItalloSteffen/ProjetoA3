@@ -7,7 +7,7 @@
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(45deg, rgb(56, 240, 56), yellow);
+            background-image: linear-gradient(45deg, rgb(76, 129, 90), rgb(97, 143, 91));
             text-align: center;
         }
         div{
@@ -42,12 +42,14 @@
             border-radius: 15px;
             color: black;
             font-size: 25px;
+        }a{
+            color: aliceblue;
         }
     </style>
 </head>
 <body>
     <div class="caixa">
-        <H1>Acesso Doador</H1>
+        <H1>Cadastro</H1>
 
         <input type="text" placeholder="Nome">
         <br><br>
@@ -55,7 +57,6 @@
         <br><br>
         <input type="text" placeholder="Seu cadastro é para" list="Cadastro">
         <datalist id="Cadastro">
-            <option value="">Meu cadastro é de:</option>
             <option>Donatário</option>
             <option>Doador</option>
         </datalist>
@@ -64,10 +65,14 @@
         <br><br>
         <input type="password" placeholder="Senha">
         <br><br>
-
-        <button>Cadastrar</button>
+        <input type="password" placeholder="Confirme a Senha">
         <br><br>
-        <a col href="/index.html">Já tenho Cadastro</a>
+
+        <button>
+            <a href="telaPrincipalDoador.html" class="button">Cadastrar</a>
+        </button>
+        <br><br>
+        <a col href="../index.html">Já tenho Cadastro</a>
     </div>
 </body>
 </html>
