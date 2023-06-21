@@ -42,50 +42,7 @@
             border-radius: 15px;
             color: black;
             font-size: 25px;
-        }.dropdown {
-            position: relative;
-            display: inline-block;
-            }
-
-            /* Estilos para o botão */
-            .dropbtn {
-            background-color: #f1f1f1;
-            color: #333;
-            padding: 10px;
-            font-size: 14px;
-            border: none;
-            cursor: pointer;
-            }
-
-            /* Estilos para o conteúdo do dropdown */
-            .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            }
-
-            /* Estilos para os links dentro do dropdown */
-            .dropdown-content a {
-            color: #333;
-            padding: 10px;
-            text-decoration: none;
-            display: block;
-            }
-
-            /* Estilos para os links ao passar o mouse sobre eles */
-            .dropdown-content a:hover {
-            background-color: #f9f9f9;
-            }
-
-            /* Mostrar o conteúdo do dropdown quando o botão é clicado ou ao passar o mouse sobre ele */
-            .dropdown:hover .dropdown-content,
-            .dropbtn:focus + .dropdown-content {
-            display: block;
-            }
-
+        }
     </style>
 </head>
 <body>
@@ -96,6 +53,13 @@
         <br><br>
         <input type="text" placeholder="Cpf/Cnpj">
         <br><br>
+        <input type="text" placeholder="Seu cadastro é para" list="Cadastro">
+        <datalist id="Cadastro">
+            <option value="">Meu cadastro é de:</option>
+            <option>Donatário</option>
+            <option>Doador</option>
+        </datalist>
+        <br><br>
         <input type="email" placeholder="Endereço">
         <br><br>
         <input type="password" placeholder="Senha">
@@ -103,22 +67,7 @@
 
         <button>Cadastrar</button>
         <br><br>
-        <a href="/index.html">Sou Donatario</a>
+        <a col href="/index.html">Já tenho Cadastro</a>
     </div>
-    <div class="dropdown">
-  <button class="dropbtn">Opções</button>
-  <div class="dropdown-content">
-    <a href="#">Opção 1</a>
-    <a href="#">Opção 2</a>
-    <a href="#">Opção 3</a>
-  </div>
-</div>
-
-CSS:
-
-css
-
-/* Estilos para o contêiner do botão de opções */
-
 </body>
 </html>
