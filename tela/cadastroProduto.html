@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, rgb(76, 129, 90), rgb(97, 143, 91));
+            text-align: center;
+        }
+        div{
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 70px;
+            border-radius: 15px;
+            color: azure;
+        }
+        input{
+            padding: 15px;
+            border-radius: none;
+            outline: auto;
+            font-size: 15px;
+        }
+        button{
+            background-color: dodgerblue;
+            border: none;
+            padding: 5px;
+            width: 100%;
+            border-radius: 15px;
+            color: white;
+            font-size: 15px;
+        }a{
+            color: aliceblue;
+        }.modal {
+            display: none; /* Oculta o modal por padrão */
+            position: absolute; /* Posiciona o modal no topo da página */
+            z-index: 1; /* Define a ordem de empilhamento acima de outros elementos */
+            left: 50%;
+            top: 50%;
+            width: 50%;
+            height: 25%;   
+            overflow: auto; /* Adiciona rolagem se o conteúdo for maior que o modal */
+            background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo escura com transparência */
+        }.modal-content {
+            position: absolute;
+            background-color: #000000;
+            color: aliceblue;
+            margin: 15% auto; /* Centraliza verticalmente o modal */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Define a largura do modal */
+        }.close{
+            background-color: dodgerblue;
+            border: none;
+            padding: 5px;
+            width: 100%;
+            border-radius: 15px;
+            color: white;
+            font-size: 15px;
+        }.final{
+            background-color: rgb(255, 30, 30);
+            border: none;
+            padding: 5px;
+            width: 100%;
+            border-radius: 15px;
+            color: white;
+            font-size: 15px;
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <div class="caixa">
+        <H1>Fazer Doação</H1>
+        <input type="text" placeholder="Alimento" list="Cadastro">
+        <datalist id="Cadastro">
+            <option>Arroz</option>
+            <option>Feijão</option>
+            <option>Macarão</option>
+        </datalist>
+        <input type="number" placeholder="Quantidade" list="Quanidade">
+        <datalist id="Quantidade">
+        </datalist>
+        <input type="text" placeholder="Enviar para" list="Donatário">
+        <datalist id="Donatário">
+            <option>Donatário1</option>
+            <option>Donatario2</option>
+            <option>Donatario3</option>
+            <option>Donatario4</option>
+        </datalist>
+        <br><br>
+        <button onclick="openModal()">Concluir Doação</button>
+    </div>
+    <div id="myModal" class="modal">
+        <!-- Conteúdo do modal -->
+        <div class="modal-content">
+          <p>Doação Feita com sucesso</p>
+          <span onclick="closeModal()" class="close">Continuar Doação</span><!-- Botão para fechar o modal -->
+          <a class="final" href="../index.html">Terminei por hoje</a><!-- Botão para Tela de loquin -->
+        </div>
+    </div>
+    <script>
+        // Função para abrir o modal
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        // Função para fechar o modal
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+    </script>  
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Cadastro</title>
     <style>
-        body{
+       body{
             font-family: Arial, Helvetica, sans-serif;
             background-image: linear-gradient(45deg, rgb(76, 129, 90), rgb(97, 143, 91));
             text-align: center;
@@ -49,13 +49,13 @@
 </head>
 <body>
     <div class="caixa">
-        <H1>Cadastro</H1>
+        <h1>Cadastro</h1>
 
         <input type="text" placeholder="Nome">
         <br><br>
         <input type="text" placeholder="Cpf/Cnpj">
         <br><br>
-        <input type="text" placeholder="Seu cadastro é para" list="Cadastro">
+        <input type="text" placeholder="Seu cadastro é para" list="Cadastro" id="cadastroTipo">
         <datalist id="Cadastro">
             <option>Donatário</option>
             <option>Doador</option>
@@ -68,11 +68,23 @@
         <input type="password" placeholder="Confirme a Senha">
         <br><br>
 
-        <button>
-            <a href="telaPrincipalDoador.html" class="button">Cadastrar</a>
-        </button>
+        <button onclick="cadastrar()">Cadastrar</button>
         <br><br>
         <a col href="../index.html">Já tenho Cadastro</a>
     </div>
+
+    <script>
+        function cadastrar() {
+            var tipoCadastro = document.getElementById("cadastroTipo").value;
+
+            if (tipoCadastro === "Donatário") {
+                // Lógica para cadastro de donatário
+                window.location.href = "modal.html";
+            } else if (tipoCadastro === "Doador") {
+                // Lógica para cadastro de doador
+                window.location.href = "cadastroProduto.html"
+            }
+        }
+    </script>
 </body>
 </html>
