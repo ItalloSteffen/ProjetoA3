@@ -43,6 +43,11 @@
 <body>
     <div class="caixa">
         <H1>Faça Login</H1>
+        <input type="text" placeholder="Meu Login é de:" list="Cadastro" id="Login">
+        <datalist id="Cadastro">
+            <option>Donatário</option>
+            <option>Doador</option>
+        </datalist>
         <input type="text" placeholder="Cpf/Cnpj">
         <br><br>
         <input type="password" placeholder="Senha">
@@ -53,5 +58,18 @@
         <br><br>
         <a href="../ProjetoA3/tela/telaCadastro.html">Fazer Cadastro</a>
     </div>
+    <script>
+        function cadastrar() {
+            var tipoCadastro = document.getElementById("cadastroTipo").value;
+
+            if (tipoCadastro === "Donatário") {
+                // Lógica para cadastro de donatário
+                window.location.href = "index.html";
+            } else if (tipoCadastro === "Doador") {
+                // Lógica para cadastro de doador
+                window.location.href = "cadastroProduto.html"
+            }
+        }
+    </script>
 </body>
 </html>
